@@ -1,0 +1,99 @@
+/* || COLOUR || */
+$site-colours: (
+    "warm4": #A62B22,
+    "warm3": #E24237,
+    "warm2": #F3743A,
+    "warm1": #FAB896,
+    "neutral": #FDFFF5,
+    "cool1": #B0D7E8,
+    "cool2": #69AAD9,
+    "cool3": #3468B1,
+    "cool4": #112D79
+);
+
+
+// shadow mixin
+@mixin deep-shadow($steps: 10, $colour: map-get($site-colours, "cool4")) {
+    $shadows: ();
+    @for $s from 1 through $steps {
+        $offset: $s * 0.5px;
+        $shadows: append($shadows, $offset $offset $colour, comma)
+    }
+    text-shadow: $shadows;
+}
+
+// shadow to apply on neutral text headers
+%shadow {
+    text-shadow: 2px 2px map-get($site-colours, "cool4" );
+}
+
+html {
+    background: linear-gradient(
+    map-get($site-colours, "cool1"),
+    map-get($site-colours, "cool2")
+    );
+}
+
+hr {
+    color: map-get($site-colours, "cool4");
+}
+
+.body {
+    color: map-get($site-colours, "neutral");
+}
+
+.header {
+    background: map-get($site-colours, "warm4");
+    @at-root #{&}__h1 {
+        @include deep-shadow(50, map-get($site-colours, "cool4"));
+    }
+}
+
+.navbar {
+    background-color: map-get($site-colours, "warm1");
+    border-top: 3px solid map-get($site-colours, "warm3");
+    border-bottom: 3px solid map-get($site-colours, "warm3");
+    li {
+        background: radial-gradient(
+            map-get($site-colours, "warm3"),
+            map-get($site-colours, "warm4"),
+        );
+        border: 3px solid map-get($site-colours, "warm3");
+        border-radius: 20px;
+        box-shadow: 4px 4px map-get($site-colours, "warm4");
+        &:hover {
+            background: radial-gradient(
+                map-get($site-colours, "warm1"),
+                map-get($site-colours, "warm2"),
+            );
+            border: 3px solid map-get($site-colours, "warm3");
+            border-radius: 20px;
+            box-shadow: 4px 4px map-get($site-colours, "warm4");
+        }
+        &:active {
+            border: 3px solid map-get($site-colours, "warm4");
+            box-shadow: 
+            -1px -1px map-get($site-colours, "warm4"),;
+        }
+    }
+    a {
+        color: map-get($site-colours, "neutral");
+       @extend %shadow;
+    }
+}
+.main {
+    background: map-get($site-colours, "neutral");
+    color: map-get($site-colours, "cool4");
+}
+
+.sidebar {
+    background: map-get($site-colours, "cool3");
+    @extend %shadow;
+}
+
+.footer {
+    border-top: 3px dashed map-get($site-colours, "neutral");
+    background: map-get($site-colours, "cool4");
+}
+
+/* || END COLOUR || */

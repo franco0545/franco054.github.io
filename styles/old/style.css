@@ -1,0 +1,180 @@
+/*
+    Project 'Dark Forest Cabin'
+    Stylesheet, iteration 3
+    Francois Asuncion
+*/
+
+
+/* 
+    Declare alternative box model  
+*/
+
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+
+/*
+    General styling  
+*/
+
+/* Entire body of document */
+body {
+    font-family: 'Inter', 'Arial', sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    letter-spacing: -0.03rem;
+}
+
+/* Headings */
+h1,
+h2,
+h3 {
+    letter-spacing: -0.06rem;
+}
+
+
+/*  Viewport Adjustment */
+/* 
+    Apply tablet layout (sidebar, narrow margins) if viewport size is
+    greater or equal to 700px
+*/
+@media screen and (width >= 700px) {
+    .container {
+    display: grid;
+    grid-template-areas: 
+        "header header"
+        "nav nav"
+        "main sidebar"
+        "footer footer";
+    grid-template-columns: 2fr 1fr;
+    margin: 0 5%;
+    }
+}
+
+/* 
+    Apply desktop layout (sidebar, full margins) if viewport size is
+    greater or equal to 1080px
+*/
+@media screen and (width >= 1080px) {
+    .container {
+        margin: 0 20%;
+    }
+}
+
+/* On mobile layout, centre the 'Recent Release' as it follows normal flow */
+@media not (width >= 800px) {
+    .recent-releases {
+        text-align: center;
+    }
+}
+
+
+/*
+    Content (header, navbar, main, etc)
+*/
+
+
+/* Header */
+header {
+    grid-area: header;
+    text-align: center;
+    background: paleturquoise;
+    font-size: 40px;
+}
+
+/* Navigation Bar */
+nav {
+    grid-area: nav;
+    background: lightgray;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 5px;
+    margin: 0;
+}
+
+nav ul li a {
+    flex: 1;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    border-right: 2px solid black;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: bold;
+    color:black;
+}
+
+nav ul li:last-child {
+    border-right: none;
+}
+
+nav ul li a:hover {
+    background-color: black;
+    color: white;
+}
+
+/* Main Content */
+main {
+    grid-area: main;
+    padding: 7px;
+}
+
+/* Intro splash ('hi. i'm franco' text) */
+.main-splash{
+    text-align: center;
+}
+
+/* Blog snippet */
+.recent-blogs-snippet {
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 5px;
+}
+
+/* Sidebar */
+aside {
+    grid-area: sidebar;
+    padding: 7px;
+}
+
+/* ___ of the week (Song of the Week, Album of the Week, Artist of the Week) */
+
+.of-the-week h3 {
+    text-align: right;
+}
+
+.otw-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    border: 2px dashed black;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
+
+}
+
+.otw-item img {
+    border: 3px solid black;
+    border-radius: 10%;
+    margin: 5px;
+}
+
+/* Footer */
+footer {
+    grid-area: footer;
+    text-align: center;
+    background: lightgray;
+}

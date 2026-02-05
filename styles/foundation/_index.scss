@@ -1,0 +1,17 @@
+@use 'typography';
+@use 'structure';
+@forward 'colour';
+
+/* || SITEWIDE || */
+/* Use alternate box model */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* || END SITEWIDE || */

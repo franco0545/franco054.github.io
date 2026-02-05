@@ -1,0 +1,44 @@
+/* || GENERIC TYPOGRAPHY || */
+
+$font-stack: Inter, Helvetica, Arial, Verdana, sans-serif;
+
+body {
+    font: 1.15rem $font-stack;
+    font-optical-sizing: auto;
+    font-style: normal;
+    letter-spacing: -0.06rem;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+}
+
+
+h1 {
+    letter-spacing: -0.2rem;
+    font-size: 7rem;
+}
+
+@media screen and (width < 700px) {
+    h1 {
+        font-size: 5rem;
+    }
+    
+}
+
+h2 {
+    letter-spacing: -0.1rem;
+    font-size: 2rem;
+}
+
+blockquote {
+    font-style: italic;
+}
+
+ul {
+    list-style: circle;
+}
+
+/* || END GENERIC TYPOGRAPHY */

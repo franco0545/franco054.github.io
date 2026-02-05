@@ -1,0 +1,117 @@
+/* 
+Project 'Dark Forest Cabin'
+Stylesheet, version 1
+Francois Asuncion 
+19th January, 2026
+
+An ode to the web style of the early 2010s.
+*/
+
+/* use alternative box model */
+/* this is to avoid hassles with the default content-box */
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: "Inter", "Arial", sans-serif;
+    width: 70%;
+    margin: 0 auto;
+    background-image: linear-gradient(
+        180deg,
+        #3F7841,
+        #2A502B
+    );
+}
+
+button,
+input,
+select,
+textarea {
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: 100%;
+    margin: 0;
+    padding: 0%;
+}
+
+header {
+    text-align: center;
+    background-color: rgb(59, 59, 59);
+    color: white;
+    text-shadow: 
+        10px 0 rgb(23, 75, 23), 
+        15px 0 rgb(15, 48, 15),
+        20px 0 rgb(14, 33, 14);
+    padding: 5px;
+    font-size: 40px;
+}
+
+.main-splash {
+    text-align: center;
+}
+
+main {
+    background-color: #EFEFEF;  
+    padding: 0 20px;
+}
+
+/* Navigation Bar */
+
+nav {
+    background-color: #AAAAAA;
+}
+
+nav ul {
+    display: flex;
+    padding: 0;
+    list-style-type: none;
+    
+}
+
+nav li {
+    display: inline;
+    padding: 0.5%;
+    text-align: center;
+    font-size:30px;
+    font-weight: bold;
+    flex: 1;
+    border-right: 2px solid black;
+}
+
+nav li:last-child {
+    border-right: none;
+}
+
+nav a {
+    display: inline-block;
+    text-decoration: none;
+    color:inherit;
+}
+
+article {
+    border: 2px dashed black;
+    border-radius: 5%;
+    padding: 10px;
+    word-break: break-word;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+
+footer {
+    text-align: center;
+    background-color: #DDDDDD;
+    padding: 5px;
+    
+}
+
+footer p {
+    font-size: 0.7em;
+}

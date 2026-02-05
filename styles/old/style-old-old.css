@@ -1,0 +1,60 @@
+/* look! i'm a CSS comment! */
+
+body {
+    padding: 10px 300px 10px 300px;
+    background-color: #1A261B;
+    font: 1em "Helvetica Neue", "Arial", sans-serif;
+    color:white;
+}
+
+header, footer {
+    text-align: center;
+    background: #213622;
+    padding: 2px;
+}
+
+nav ul {
+    display:flex;
+    list-style: none;
+}
+
+main {
+    background-color: #213622;
+}
+
+article {
+    padding: 5px;
+    background: #2a4229;
+}
+
+nav a:hover {
+    border: 2px solid black;
+}
+
+
+.main-splash {
+    text-align: center;
+}
+
+
+/*
+    media query to change the CSS or something, if
+    the viewport is small
+*/
+@media (width <=70em) {
+    body {
+        padding: 10px 100px 10px 100px;
+    }
+    
+}
+
+.recentBlogs article p::first-line{
+    font-weight: bold;
+    font-size: 1.25em;
+}
+
+.navbar-list a {
+    display: inline-block;
+    padding: 1em;
+    text-decoration: none;
+}

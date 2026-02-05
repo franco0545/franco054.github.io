@@ -1,0 +1,117 @@
+/* || STRUCTURE || */
+
+/* Body */
+@media screen and (width >= 1080px) {
+    .body {
+        margin: 0 20%; 
+    }
+}
+
+// mixin to include sidebar
+@mixin include-sidebar($sidebar: true) {
+    @if $sidebar {
+        display: grid;
+        grid-template-areas: 
+        "header header"
+        "navbar navbar"
+        "main sidebar"
+        "footer footer";
+        grid-template-columns: 3fr 1fr;
+    } @else {
+        display: grid;
+        grid-template-areas:
+        "header"
+        "navbar"
+        "main"
+        "footer";
+    }
+}
+
+@media screen and (width >= 700px) {
+    .container {
+        @include include-sidebar(true);
+        margin: 0;
+        align-content: start;
+    }
+
+    /* if the page has no sidebar specified */
+    .container-no-sidebar {
+        @include include-sidebar(false);
+        margin: 0;
+    }
+}
+
+/* Header */
+.header {
+    grid-area: header;
+    text-align: center;
+    padding: 3rem;
+}
+
+/* Navbar */
+.navbar {
+    grid-area: navbar;
+    @at-root #{&}__ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+    }
+    a {
+        text-decoration: none;
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.3rem;
+        padding: 0.3rem;
+        display: block;
+    }
+    li {
+        flex: 1;
+        margin: 0.5rem;
+    }
+}
+/* Navbar items are stacked along the cross axis if viewport is less than or equal to 700 px  */
+@media screen and (width <= 700px) {
+    .navbar {
+         @at-root #{&}__ul {
+            flex-direction: column;
+        }
+        a {
+            padding: 0;
+        }
+    }    
+}
+
+/* Main Content */
+.main {
+    grid-area: main;
+    padding: 0.6rem;
+    min-height: 720px;
+}
+
+/* Sidebar */
+.sidebar {
+    grid-area: sidebar;
+    padding: 0 0.6rem;
+    h2,
+    h3 {
+        margin: 0.3rem 0;
+    }
+}
+
+@media screen and (width <= 700px) {
+    .sidebar  {
+        text-align: center;
+    }
+}
+/* Footer */
+.footer {
+    grid-area: footer;
+    text-align: center;
+    font-size: 0.7rem;
+    padding: 1rem;
+}
+
+/* || END STRUCTURE || */

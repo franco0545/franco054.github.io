@@ -1,0 +1,101 @@
+/*
+    Project 'Dark Forest Cabin' - SCSS Stylesheet
+    this is like, what? the fourth time i have to rewrite the whole styling?
+    hey, the CSS'll be more streamlined now, at least.
+*/
+
+@use 'foundation';
+
+/* || ELEMENTS || */
+
+.intro {
+    text-align: center;
+    padding: 1rem 0;
+    margin: 0.5rem;
+    background: map-get(foundation.$site-colours, "warm2");
+    color: map-get(foundation.$site-colours, "neutral");
+    border: 5px solid map-get(foundation.$site-colours, "warm3");
+    border-radius: 15px;
+    box-shadow: 5px 5px map-get(foundation.$site-colours, "warm4");
+    @at-root #{&}__h2,
+    #{&}__h3 {
+        text-shadow: 3px 3px map-get(foundation.$site-colours, "cool4");
+    }
+    @at-root #{&}__h2 {
+        font-size:3.5rem;
+        margin: 0.25rem 1rem;
+    }
+    @at-root #{&}__h3 {
+        font-size:2rem;
+        margin: 0.25rem 1rem;
+    }
+}
+
+.quote {
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.blog-snippet {
+    border: 6px double map-get(foundation.$site-colours, "cool4");
+    border-radius: 20px;
+    background-color: map-get(foundation.$site-colours, "neutral");
+    box-shadow: 3px 3px map-get(foundation.$site-colours, "cool4");
+    margin: 1rem 0;
+    padding: 0.8rem;
+}
+
+.otw-item {
+    text-shadow:none;
+    background-color: map-get(foundation.$site-colours, "cool1");
+    color: map-get(foundation.$site-colours, "cool4");
+    border: 3px solid map-get(foundation.$site-colours, "cool3");
+    border-radius: 20px;
+    box-shadow: 5px 5px map-get(foundation.$site-colours, "cool4");
+    padding: 5px;
+    display: grid;
+    grid-template-areas: "img data";
+    grid-template-columns: 1fr 2fr;
+}
+
+.otw-item__img {
+    grid-area:img;
+    img {
+        border: 3px solid map-get(foundation.$site-colours, "cool3");
+        border-radius: 15px;
+    }
+    
+    align-self: center;
+    
+}
+
+.otw-item__data{
+    grid-area: data;
+    padding-left: 0.5rem;
+    align-self: center;
+}
+
+.track-release{
+    img {
+        border: 5px solid map-get(foundation.$site-colours, "cool1");
+        border-radius: 5px;
+        box-shadow: 5px 5px map-get(foundation.$site-colours, "cool4");
+    }
+}
+/*|| END ELEMENTS || */
+
+/*
+          ____________
+       _==            ==_
+      /                  \
+     /   >-<              \
+    /        ______________\
+    |       /  |    |  / |
+    |      |     )    /  |
+    |      |    ◡   /   |
+    |      \ ______/     \
+    |       \     |       \
+    |________\    |________\
+    (c) 2026 Franco A.
+
+*/
