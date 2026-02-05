@@ -1,0 +1,221 @@
+<!-- 
+    Project 'Dark Forest Cabin'
+    Version 1.0
+    Written by Francois Asuncion
+    2026-01-17
+-->
+<!DOCTYPE html>
+<html lang="en-NZ">
+    <!-- Webpage Metadata -->
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <meta name="author" content="Francois Asuncion" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles/style.css" />
+        <title>Franco A.</title>
+    </head>
+    <body class="body">
+        <!-- Container which holds the rest of the body content. Allows for easier CSS styling -->
+        <div class="container">
+                <!-- Header -->
+            <header class="header">
+                <h1 class="header__h1">franco A.</h1>
+            </header>
+            
+
+
+            <!-- Navigation Bar -->
+            <nav class="navbar">
+                <ul class="navbar__ul">
+                    <li><a href="index.html">home</a></li>
+                    <li><a href="coming_soon.html">about</a></li>
+                    <li><a href="coming_soon.html">blog</a></li>
+                    <li><a href="coming_soon.html">music</a></li>
+                    <li><a href="coming_soon.html">photos</a></li>
+                    <li><a href="coming_soon.html">guestbook</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Main Content -->
+            <main class="main">
+                <!-- Intro Splash -->
+                <div class="intro">
+                    <h2 class="intro__h2">hi. i'm franco.</h2>
+                    <h3 class="intro__h3">welcome to my home on the internet.</h3>
+                </div>
+                <!-- 'Recent Photos' section - displays a carousel of ~5-10 images -->
+                <section class="recent-photos">
+                    <h2>Recent Photos</h2>
+                    <p>TODO: image carousel here. </p>
+                    <a href="coming_soon.html">&lt; &lt; See all photos</a>
+                </section>
+
+                <hr />
+
+                <!-- 'Latest Posts' section - shows 5-10 of the most recent blog entries, with short summaries of each blog. -->
+                <section class="recent-blogs">
+                    <h2>Latest Posts</h2>
+
+                    <!-- Snippet of blog article, full post stored on a separate webpage -->
+
+                    <article class="blog-snippet">
+                        <h3>
+                            Testing of Block Quotes <br />
+                            <i><sub>Article Date</sub></i>
+                        </h3>
+                        <blockquote class="quote" cite="https://blog.native-instruments.com/lena-raine-interview/">
+                                <p>
+                                    "I bought Massive and started messing around. It was the most approachable synth I’d come across – it was just a bunch of knobs, and I was like, ‘Fuck yeah, I can tweak knobs!’”
+                                </p>
+                        </blockquote>
+                        <button>Read full post &gt;&gt;</button>
+                    </article>
+
+
+                    <article class="blog-snippet">
+                        <h3>
+                            Article Title <br />
+                            <i><sub>Article Date (replace this with a <code>&lt;date&gt;</code> element)</sub></i>
+                        </h3>
+                        <p>
+                            Article description, usually 1-2 sentences.
+                        </p>
+                        <button>Read full post &gt;&gt;</button>
+                    </article>
+
+                    <!-- <article class="blog-snippet"
+                        <h3>
+                            wellington: explained in hipster ipsum <br />
+                            <i><sub><time datetime="2026-01-12 10:00">JANUARY 12<sup>th</sup>, 2026, 10:00 AM </time></sub></i>
+                        </h3>
+                        <p>
+                            Drinking vinegar woke keffiyeh pabst hella bushwick grailed coeliac lo-fi chambray quinoa irony cliche
+                            church-key intelligentsia. Marfa ennui mixtape fit gastropub cloud bread irony unicorn asymmetrical
+                            hot chicken.
+                        </p>
+                        <button>Read full post &gt;&gt;</button>
+                    </article> -->
+
+                    <article class="blog-snippet">
+                        <h3>
+                            new website, who dis? <br />
+                            <i><sub><time datetime="2025-12-31 23:59">DECEMBER 31<sup>st</sup>, 2025, 11:59 PM </time></sub></i>
+                        </h3>
+                        <p>
+                            welcome to <del>team fortress 2</del> my website! after <del>nine</del> [2-ish?] years in
+                            development, hopefully it will have been worth the wait.
+                        </p>
+                        <button>Read full post &gt;&gt;</button>
+                    </article>
+                    <a href="coming_soon.html">&lt; &lt; View older posts</a>
+                </section>
+            </main>
+
+
+
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                
+                <!-- Recent Releases -->
+                <section>
+                    <h2>Recent Releases</h2>
+                    <div class="track-release">
+                        <a href="https://francoa.bandcamp.com/track/imyd" target="_blank">
+                            <img src="assets/images/francoa-imyd-th.png" width="250" height="250" alt="Cover artwork of 'Oracular Spectacular' (2008) by music duo MGMT" />
+                        </a>
+                        <p>
+                            <b>IMYD</b> <br />
+                            <i>October 11<sup>th</sup>, 2025</i>
+                        </p>
+                    </div>
+
+                    <div class="track-release">
+                        <a href="https://francoa.bandcamp.com/track/wellington-dawn" target="_blank">
+                            <img src="assets/images/francoa-wellingtondawn-th.png" width="250" height="250" alt="Cover artwork of 'Oracular Spectacular' (2008) by music duo MGMT" />
+                        </a>
+                        <p>
+                            <b>Wellington, Dawn</b> <br />
+                            <i>October 11<sup>th</sup>, 2025</i>
+                        </p>
+                    </div>
+                </section>
+
+                <hr />
+
+                <!-- _____ of the week -->
+                <section>
+                    <h2>Franco's...</h2>
+
+                    <h3>Song of the Week</h3>
+                    <div class="otw-item">
+                        <a href="https://tidal.com/track/334299129/u" target="_blank" class="otw-item__img">
+                            <img src="assets/images/neon-indian-vega-intl-night-school.jpg" width="100" height="100" alt="Cover artwork of 'VEGA Intl. Night School' (2015) by Neon Indian" />
+                        </a>
+                        <p class="otw-item__data">
+                            <b>Neon Indian</b> <br />
+                            <i>C'est La Vie (say the casualties!)</i>
+                        </p>
+                    </div>
+
+                    <h3>Album of the Week</h3>
+                    <div class="otw-item">
+                        <a href="https://tidal.com/album/362603601/" target="_blank", class="otw-item__img">
+                            <img src="assets/images/jvb-nohands-th.jpg" width="100" height="100" alt="Cover artwork of 'NO HANDS' (2024) by rap duo Joey Valence & Brae" />
+                        </a>
+                        <p class="otw-item__data">
+                            <b>Joey Valence & Brae</b> <br />
+                            <i>NO HANDS</i>
+                        </p>
+                    </div>
+
+                    <h3>Artist of the Week</h3>
+                    <div class="otw-item">
+                        <a href="https://radicaldream.land/" target="_blank" class="otw-item__img">
+                            <img src="assets/images/lenaraine-th.png" width="100" height="100" alt="Portrait of composer Lena Raine" />
+                        </a>
+                        <p class="otw-item__data">
+                            <b>Lena Raine</b>
+                        </p>
+                    </div>
+                    <p><i>Data taken from last.fm (not right now, but will be soon)</i></p>
+                </section>
+
+                <hr />
+
+                <section>
+                    <h2>Other cool things</h2>
+                    <p></p>
+                </section>
+            </aside>
+
+
+            
+            <!-- Footer -->
+            <footer class="footer">
+                <a href="https://blog.radicaldream.land"><img src="https://i.postimg.cc/QxhG798p/dispatchblog-banner.gif"></a>
+                    <a href="http://www.anybrowser.org/campaign/"><img src="https://88x31.nl/gifs/anyie_anim.gif" width="graphic-width-in-pixels" height="graphic-height-in-pixels" alt="Viewable With Any Browser" /></a>
+                    <a href="#" id="shielded-logo">
+                        <img alt="shielded" src="assets/images/shielded-88x31-2.png"></a>
+                    <script src="https://staticcdn.co.nz/embed/embed.js"></script>
+                    <script>
+                        (function () {
+                            window.onload = function(){
+                                var frameName = new ds07o6pcmkorn({
+                                    openElementId: "#shielded-logo",
+                                    modalID: "modal",
+                                });
+                                frameName.init();
+                            }
+                        })();
+                    </script>
+                <p>
+                    &copy;2026 Francois Asuncion. All contents on this page are copyright of Francois Asuncion unless specified. <br />
+                    The owner of this website does not consent to their page being used for generative AI training data.
+                </p>
+            </footer>
+        </div>
+    </body>
+</html>
